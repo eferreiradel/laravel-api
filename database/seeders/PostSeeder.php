@@ -19,7 +19,7 @@ class PostSeeder extends Seeder
             Post::create([
                 'thumb'=>$faker->imageUrl(),
                 'name' => $faker->name(),
-                'price'=>$faker->randomFloat(2),
+                'price'=>$faker->randomDigit(),
                 'category'=>$faker->sentence(),
             ]);
         }

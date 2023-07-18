@@ -17,7 +17,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('thumb');
             $table->string('name', 50);
-            $table->float('price');
+            $table->tinyInteger('price');
             $table->string('category');
 
         });
