@@ -18,3 +18,5 @@ Route::get('/', function () {
     $titolo = 'culloculo';
     return view('welcome', compact('titolo'));
 });
+
+Route::get('/posts',[PostController::class, 'index']);

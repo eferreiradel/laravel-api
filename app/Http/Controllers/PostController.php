@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Return_;
 
 class PostController extends Controller
 {
@@ -11,8 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {	
-	$test = "Funziona";
-        return $test;
+	    $posts = Post::all();
+        return response()->json($posts);
     }
 
     /**
